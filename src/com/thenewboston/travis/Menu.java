@@ -11,7 +11,7 @@ public class Menu extends ListActivity {
 	
 	
 	//VIDEO 20
-	String classes[] = {"StartingPoint", "example1", "example2", "example3", "example4", "example5", "example6"};
+	String classes[] = {"StartingPoint", "TextPlay", "example2", "example3", "example4", "example5", "example6"};
 	
 	
 	
