@@ -25,19 +25,28 @@ public final class R {
         public static final int splash_background=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090007;
-        public static final int b_Results=0x7f090004;
+        public static final int action_settings=0x7f09000f;
+        public static final int analogClock1=0x7f09000a;
+        public static final int bSentEmail=0x7f090009;
+        public static final int b_Results=0x7f09000c;
         public static final int b_add_one=0x7f090001;
         public static final int b_subtract_one=0x7f090002;
-        public static final int et_Commands=0x7f090003;
-        public static final int tb_password=0x7f090005;
-        public static final int tv_Results=0x7f090006;
+        public static final int etAction=0x7f090007;
+        public static final int etEmails=0x7f090003;
+        public static final int etIntro=0x7f090004;
+        public static final int etName=0x7f090005;
+        public static final int etOutro=0x7f090008;
+        public static final int etThings=0x7f090006;
+        public static final int et_Commands=0x7f09000b;
+        public static final int tb_password=0x7f09000d;
+        public static final int tv_Results=0x7f09000e;
         public static final int tv_add_sub_display=0x7f090000;
     }
     public static final class layout {
         public static final int activity_starting_point=0x7f030000;
-        public static final int splash=0x7f030001;
-        public static final int text=0x7f030002;
+        public static final int email=0x7f030001;
+        public static final int splash=0x7f030002;
+        public static final int text=0x7f030003;
     }
     public static final class menu {
         public static final int starting_point=0x7f080000;
