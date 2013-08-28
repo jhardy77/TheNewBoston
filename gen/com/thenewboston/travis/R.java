@@ -25,13 +25,14 @@ public final class R {
         public static final int splash_background=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090016;
+        public static final int action_settings=0x7f09001d;
         public static final int analogClock1=0x7f09000a;
         public static final int bSentEmail=0x7f090009;
-        public static final int bSetWall=0x7f09000d;
-        public static final int b_Results=0x7f090013;
-        public static final int b_StartActivity=0x7f09000f;
-        public static final int b_StartActivityForResult=0x7f090010;
+        public static final int bSetWall=0x7f090011;
+        public static final int b_Results=0x7f09001a;
+        public static final int b_Return=0x7f090017;
+        public static final int b_StartActivity=0x7f09000c;
+        public static final int b_StartActivityForResult=0x7f09000d;
         public static final int b_add_one=0x7f090001;
         public static final int b_subtract_one=0x7f090002;
         public static final int etAction=0x7f090007;
@@ -40,13 +41,19 @@ public final class R {
         public static final int etName=0x7f090005;
         public static final int etOutro=0x7f090008;
         public static final int etThings=0x7f090006;
-        public static final int et_Commands=0x7f090012;
-        public static final int et_Send=0x7f09000e;
-        public static final int ibTakePic=0x7f09000c;
-        public static final int ivReturnedPic=0x7f09000b;
-        public static final int tb_password=0x7f090014;
-        public static final int tv_Got=0x7f090011;
-        public static final int tv_Results=0x7f090015;
+        public static final int et_Commands=0x7f090019;
+        public static final int et_Send=0x7f09000b;
+        public static final int ibTakePic=0x7f090010;
+        public static final int ivReturnedPic=0x7f09000f;
+        public static final int r_Both=0x7f090016;
+        public static final int r_Crazy=0x7f090014;
+        public static final int r_Sexy=0x7f090015;
+        public static final int rg_Answers=0x7f090013;
+        public static final int tb_password=0x7f09001b;
+        public static final int tv_Got=0x7f09000e;
+        public static final int tv_Question=0x7f090012;
+        public static final int tv_Results=0x7f09001c;
+        public static final int tv_Text=0x7f090018;
         public static final int tv_add_sub_display=0x7f090000;
     }
     public static final class layout {

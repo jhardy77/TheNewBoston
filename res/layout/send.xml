@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <EditText
-        android:id="@+id/et_Send"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/b_StartActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/et_Send"
-        android:text="StartActivity" />
-
-    <Button
-        android:id="@+id/b_StartActivityForResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/b_StartActivity"
-        android:layout_alignTop="@+id/b_StartActivity"
-        android:text="StartActivityForResult" />
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/tv_Got"
-        android:layout_below="@+id/b_StartActivityForResult"
+        android:id="@+id/tv_Question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Travis is..." />
+
+    <RadioGroup
+        android:id="@+id/rg_Answers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/r_Crazy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crazy" />
+
+        <RadioButton
+            android:id="@+id/r_Sexy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Super Sexy" />
+
+        <RadioButton
+            android:id="@+id/r_Both"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Both" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/b_Return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return" />
+
+    <TextView
+        android:id="@+id/tv_Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView" />
 
-</RelativeLayout>
+</LinearLayout>
+
