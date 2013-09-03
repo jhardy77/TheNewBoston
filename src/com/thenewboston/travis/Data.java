@@ -1,6 +1,7 @@
 package com.thenewboston.travis;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 public class Data extends Activity implements OnClickListener {
 
-	EditText sentET;
+	EditText sendET;
 	Button start, startFor;
 	TextView gotAnswer;
 	
@@ -35,7 +36,7 @@ public class Data extends Activity implements OnClickListener {
 
 	private void initialiseVars() {
 		// TODO Auto-generated method stub
-		sentET = (EditText) findViewById(R.id.et_Send);
+		sendET = (EditText) findViewById(R.id.et_Send);
 		start = (Button) findViewById(R.id.b_StartActivity);
 		startFor = (Button) findViewById(R.id.b_StartActivityForResult);
 		gotAnswer = (TextView) findViewById(R.id.tv_Got);
@@ -51,6 +52,22 @@ public class Data extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
+		switch (arg0.getId()) {
+		case R.id.b_StartActivity:
+			
+			//Passing data out Tutorial 47
+			String bread = sendET.getText().toString();
+			Bundle basket = new Bundle();
+			basket.putString("key", bread);
+			Intent a = new Intent(Data.this, OpenedClass.class);
+			a.putExtras(basket);
+			startActivity(a);
+			break;
+			
+		case R.id.b_StartActivityForResult:
+			
+			break;
+		}
 		
 	}
 
