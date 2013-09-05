@@ -65,7 +65,8 @@ public class Data extends Activity implements OnClickListener {
 			break;
 			
 		case R.id.b_StartActivityForResult:
-			
+			Intent i = new Intent(Data.this, OpenedClass.class);
+			startActivityForResult(i, 0);
 			break;
 		}
 		

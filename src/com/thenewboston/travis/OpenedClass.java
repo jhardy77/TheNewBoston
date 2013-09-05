@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 public class OpenedClass extends Activity implements OnClickListener, OnCheckedChangeListener {
 
-	TextView question, text;
+	TextView question, test;
 	Button returnData;
 	RadioGroup selectionList;
-	String gotBread;
+	String gotBread, setData;
 	
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -42,7 +42,7 @@ public class OpenedClass extends Activity implements OnClickListener, OnCheckedC
 	private void InitialiseVars() {
 		// TODO Auto-generated method stub
 		question = (TextView) findViewById(R.id.tv_Question);
-		text = (TextView) findViewById(R.id.tv_Text);
+		test = (TextView) findViewById(R.id.tv_Text);
 		returnData = (Button) findViewById(R.id.b_Return);
 		returnData.setOnClickListener(this);
 		selectionList = (RadioGroup) findViewById(R.id.rg_Answers);
@@ -68,17 +68,18 @@ public class OpenedClass extends Activity implements OnClickListener, OnCheckedC
 		// TODO Auto-generated method stub
 		switch(arg1) {
 		case R.id.r_Crazy:
-			
+			setData = "Probably right";
 			break;
 			
 		case R.id.r_Sexy:
-			
+			setData = "Definately right";
 			break;
 			
 		case R.id.r_Both:
-			
+			setData = "Spot on right";
 			break;
 		}
+		test.setText(setData);
 	}
 
 	
