@@ -1,6 +1,7 @@
 package com.thenewboston.travis;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,9 +29,9 @@ public class OpenedClass extends Activity implements OnClickListener, OnCheckedC
 		InitialiseVars();
 		
 		//Gets the data from Data.java Tutorial 48
-		Bundle gotBasket = getIntent().getExtras();
-		gotBread = gotBasket.getString("key");
-		question.setText(gotBread);
+		//Bundle gotBasket = getIntent().getExtras();
+		//gotBread = gotBasket.getString("key");
+		//question.setText(gotBread);
 		
 		
 	}
@@ -57,6 +58,14 @@ public class OpenedClass extends Activity implements OnClickListener, OnCheckedC
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
 		
+		//Video 50, parsing data back to Data.java
+		Intent person = new Intent(OpenedClass.this, Data.class);
+		Bundle backpack = new Bundle();
+		backpack.putString("answer", setData);
+		person.putExtras(backpack);
+		setResult(RESULT_OK, person);
+		finish();
+
 	}
 
 

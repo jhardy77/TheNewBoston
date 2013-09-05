@@ -25,7 +25,8 @@ public final class R {
         public static final int splash_background=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001d;
+        public static final int aboutus=0x7f09001d;
+        public static final int action_settings=0x7f09001f;
         public static final int analogClock1=0x7f09000a;
         public static final int bSentEmail=0x7f090009;
         public static final int bSetWall=0x7f090011;
@@ -45,6 +46,7 @@ public final class R {
         public static final int et_Send=0x7f09000b;
         public static final int ibTakePic=0x7f090010;
         public static final int ivReturnedPic=0x7f09000f;
+        public static final int preferences=0x7f09001e;
         public static final int r_Both=0x7f090016;
         public static final int r_Crazy=0x7f090014;
         public static final int r_Sexy=0x7f090015;
@@ -66,7 +68,8 @@ public final class R {
         public static final int text=0x7f030006;
     }
     public static final class menu {
-        public static final int starting_point=0x7f080000;
+        public static final int cool_menu=0x7f080000;
+        public static final int starting_point=0x7f080001;
     }
     public static final class raw {
         public static final int splash_sound=0x7f040000;
