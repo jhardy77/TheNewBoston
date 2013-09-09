@@ -2,8 +2,10 @@ package com.thenewboston.travis;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 public class Splash extends Activity {
 	
@@ -15,7 +17,14 @@ public class Splash extends Activity {
 		setContentView(R.layout.splash);
 		
 		ourSong = MediaPlayer.create(Splash.this, R.raw.splash_sound);
-		ourSong.start();
+		
+		//video 57
+		SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		boolean checkMusic = getPrefs.getBoolean("checkbox", true);
+		if (checkMusic == true) {
+			ourSong.start();
+		}
+
 		
 		Thread timer = new Thread() {
 			public void run() {
