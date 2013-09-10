@@ -14,10 +14,10 @@
 
     <Button
         android:id="@+id/b_add_one"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Add One"
+        android:background="@drawable/custom"
         android:textSize="20sp" />
 
     <Button
