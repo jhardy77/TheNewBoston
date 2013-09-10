@@ -15,7 +15,7 @@ public class Menu extends ListActivity {
 
 	// VIDEO 20
 	String classes[] = { "StartingPoint", "TextPlay", "Email", "Camera",
-			"Data", "GFX", "example6" };
+			"Data", "GFX", "GFXSurface" };
 
 	// ////////////////////////////////////////////////////////////////////////////////////
 

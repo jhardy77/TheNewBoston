@@ -86,6 +86,10 @@
             android:name=".GFX"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".GFXSurface"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
