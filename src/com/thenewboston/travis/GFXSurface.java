@@ -2,8 +2,11 @@ package com.thenewboston.travis;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 
-public class GFXSurface extends Activity {
+public class GFXSurface extends Activity implements OnTouchListener {
 
 	
 	
@@ -42,6 +45,15 @@ public class GFXSurface extends Activity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		ourSurfaceView.resume();
+	}
+
+
+
+
+	@Override
+	public boolean onTouch(View arg0, MotionEvent arg1) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	
