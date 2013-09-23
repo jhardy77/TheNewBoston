@@ -38,7 +38,6 @@ public class SharedPrefs extends Activity implements OnClickListener {
 	}
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -60,11 +59,17 @@ private void initiliseVars() {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.b_Save:
-			String stringdata = data.getText().toString();
-			
+			//Gets the text from the EditText field and convert it to a string
+			String stringData = data.getText().toString();
+			SharedPreferences.Editor editor = someData.edit();
+			editor.putString("sharedString", stringData);
+			editor.commit();
 			break;
 			
 		case R.id.b_Load:
+			someData = getSharedPreferences(filename, 0);
+			String dataReturned = someData.getString("sharedString", "Couldn't Load Data");
+			dataResults.setText(dataReturned);
 			
 			break;
 			

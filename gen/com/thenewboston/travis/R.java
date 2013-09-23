@@ -101,16 +101,17 @@ public final class R {
         public static final int about=0x7f030000;
         public static final int activity_starting_point=0x7f030001;
         public static final int email=0x7f030002;
-        public static final int flipper=0x7f030003;
-        public static final int get=0x7f030004;
-        public static final int photo=0x7f030005;
-        public static final int send=0x7f030006;
-        public static final int sharedprefs=0x7f030007;
-        public static final int simplebrowser=0x7f030008;
-        public static final int sliding=0x7f030009;
-        public static final int splash=0x7f03000a;
-        public static final int tabs=0x7f03000b;
-        public static final int text=0x7f03000c;
+        public static final int externaldata=0x7f030003;
+        public static final int flipper=0x7f030004;
+        public static final int get=0x7f030005;
+        public static final int photo=0x7f030006;
+        public static final int send=0x7f030007;
+        public static final int sharedprefs=0x7f030008;
+        public static final int simplebrowser=0x7f030009;
+        public static final int sliding=0x7f03000a;
+        public static final int splash=0x7f03000b;
+        public static final int tabs=0x7f03000c;
+        public static final int text=0x7f03000d;
     }
     public static final class menu {
         public static final int cool_menu=0x7f0a0000;
