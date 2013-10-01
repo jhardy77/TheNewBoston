@@ -93,9 +93,9 @@ public final class R {
         public static final int tab2=0x7f0b0041;
         public static final int tab3=0x7f0b0042;
         public static final int tabhost=0x7f0b003c;
-        public static final int tableLayout1=0x7f0b003a;
         public static final int tb_password=0x7f0b0046;
         public static final int textView1=0x7f0b0000;
+        public static final int tl_tableLayout1=0x7f0b003a;
         public static final int tv_Got=0x7f0b0017;
         public static final int tv_LoadSharedPrefs=0x7f0b0025;
         public static final int tv_Question=0x7f0b001b;

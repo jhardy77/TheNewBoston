@@ -14,29 +14,23 @@ public class SQLiteExample extends Activity implements OnClickListener {
 
 	EditText name, hotness;
 	Button update, view;
-	
 
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
+		// Sets the content view
 		setContentView(R.layout.sqlliteexample);
-		initialiseVars();
-		clicks();
+
+		// Initializes the variables passed in
+		initializeVars();
+
+		// Sets the OnClick Events
+		SetsOnClickEvents();
 	}
 
-	
-	
-	private void clicks() {
-		// TODO Auto-generated method stub
-		update.setOnClickListener(this);
-		view.setOnClickListener(this);
-	}
-
-
-
-	private void initialiseVars() {
+	private void initializeVars() {
 		// TODO Auto-generated method stub
 		name = (EditText) findViewById(R.id.et_sqlName);
 		hotness = (EditText) findViewById(R.id.et_sqlHotness);
@@ -44,49 +38,64 @@ public class SQLiteExample extends Activity implements OnClickListener {
 		view = (Button) findViewById(R.id.b_sqlView);
 	}
 
-	
+	private void SetsOnClickEvents() {
+		// TODO Auto-generated method stub
+		update.setOnClickListener(this);
+		view.setOnClickListener(this);
+	}
 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		
+
 		switch (v.getId()) {
-		
+
 		case R.id.b_sqlUpdateData:
-			
+
 			boolean didItWork = true;
+			
 			try {
+				// Gets any data from the et_sqlName
 				String getName = name.getText().toString();
+
+				// Gets any data from the et_sqlHotness
 				String getHotness = hotness.getText().toString();
-				
+
 				HotOrNot entry = new HotOrNot(SQLiteExample.this);
 				entry.open();
 				entry.createEntry(getName, getHotness);
-				
 				entry.close();
-				
 			} catch (Exception e) {
 				didItWork = false;
+				String error = e.toString();
+				Dialog d = new Dialog(SQLiteExample.this);
+				d.setTitle("Dang it");
+				TextView tv = new TextView(SQLiteExample.this);
+				tv.setText(error);
+				d.setContentView(tv);
+				d.show();
+				
+				
 			} finally {
 				if (didItWork) {
-					Dialog d = new Dialog(this);
+					Dialog d = new Dialog(SQLiteExample.this);
 					d.setTitle("Heck Yea!");
-					TextView  tv = new TextView(this);
+					TextView tv = new TextView(SQLiteExample.this);
 					tv.setText("Success");
 					d.setContentView(tv);
 					d.show();
 				}
 			}
-			
+
 			break;
-			
+
 		case R.id.b_sqlView:
 			Intent i = new Intent("com.thenewboston.travis.SQLVIEW");
 			startActivity(i);
 			break;
-			
+
 		}
-		
+
 	}
 
 }

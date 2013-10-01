@@ -2,6 +2,7 @@ package com.thenewboston.travis;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
@@ -19,29 +20,10 @@ public class HotOrNot {
 	private static final String DATABASE_TABLE = "peopleTable";
 	private static final int DATABASE_VERSION = 1;
 
-	
 	private DbHelper ourHelper;
 	private final Context ourContext;
 	private SQLiteDatabase ourDatabase;
 
-	
-	public HotOrNot(Context c) {
-		ourContext = c;
-	}
-
-	
-	public HotOrNot open() throws SQLException {
-		ourHelper = new DbHelper(ourContext);
-		ourDatabase = ourHelper.getWritableDatabase();
-		return this;
-	}
-	
-	//Closes this class
-	public void close() {
-		ourHelper.close();
-	}
-
-	
 	private static class DbHelper extends SQLiteOpenHelper {
 
 		public DbHelper(Context context) {
@@ -68,9 +50,22 @@ public class HotOrNot {
 			db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
 			onCreate(db);
 		}
-
 	}
 
+	public HotOrNot(Context c) {
+		ourContext = c;
+	}
+
+	public HotOrNot open() throws SQLException {
+		ourHelper = new DbHelper(ourContext);
+		ourDatabase = ourHelper.getWritableDatabase();
+		return this;
+	}
+
+	// Closes this class
+	public void close() {
+		ourHelper.close();
+	}
 
 	public long createEntry(String getName, String getHotness) {
 		// TODO Auto-generated method stub
@@ -80,7 +75,24 @@ public class HotOrNot {
 		return ourDatabase.insert(DATABASE_TABLE, null, cv);
 	}
 
-	
-	
-	
+	public String getData() {
+		// TODO Auto-generated method stub
+		String[] columns = new String[] { KEY_ROWID, KEY_NAME, KEY_HOTNESS };
+		Cursor c = ourDatabase.query(DATABASE_TABLE, columns, null, null, null, null, null);
+		String result = "";
+		
+		int iRow = c.getColumnIndex(KEY_ROWID);
+		int iName = c.getColumnIndex(KEY_NAME);
+		int iHotness = c.getColumnIndex(KEY_HOTNESS);
+		
+		for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+			result = result + c.getString(iRow) + " " + c.getString(iName) + " " + c.getString(iHotness) + "\n";
+			
+			
+		}
+		
+		
+		return result;
+	}
+
 }
